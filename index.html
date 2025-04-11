@@ -392,20 +392,20 @@
             <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Entertainment</span>
             </div>
             <div class="project-row">
-                <a href="https://www.wikidata.org/" class="project-wrapper">
-                    <img class="project-logo" alt="" src="images/wikigames.svg">
-                    <div class="project-block">
-                        <div class="project-name-wrapper"><span class="project-name">Wikigames</span></div><span
-                            class="project-tagline">Free games and puzzles within a native mobile app</span>
-                    </div>
-                </a>
-
                 <a href="https://www.roblox.com/games/99320538920886/Wikipedia-Speed-Run" class="project-wrapper">
                     <img class="project-logo" alt="" src="images/roblox.png">
                     <div class="project-block">
                         <div class="project-name-wrapper"><span class="project-name">Speed Run</span></div><span
                             class="project-tagline">A Roblox experience for racing from one
                             article to another</span>
+                    </div>
+                </a>
+
+                <a href="" class="project-wrapper" id="wikigames-link">
+                    <img class="project-logo" alt="" src="images/wikigames.svg">
+                    <div class="project-block">
+                        <div class="project-name-wrapper"><span class="project-name">Wikigames</span></div><span
+                            class="project-tagline">Free games and puzzles within a native mobile app</span>
                     </div>
                 </a>
             </div>
@@ -435,6 +435,21 @@
                 Policy</a></small>
     </p>
 
+    <script>
+        // Get the Wikigames link element
+        const wikigamesLink = document.getElementById('wikigames-link');
+
+        // Add a click event listener
+        if (wikigamesLink) {
+            wikigamesLink.addEventListener('click', function (event) {
+                // Prevent the default link navigation
+                event.preventDefault();
+
+                // Show the alert dialog
+                alert("Project in progress, check back soon..");
+            });
+        }
+    </script>
 </body>
 
 </html>
