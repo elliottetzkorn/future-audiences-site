@@ -3,7 +3,6 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Future Audiences</title>
     <meta name="description"
         content="Future Audiences is an experimental arm of Wikimedia investigating new platforms and products.">
@@ -14,49 +13,50 @@
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
     <style>
         html {
-            font-family: sans-serif;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
-            font-size: 62.5%
+            font-size: 62.5%;
+            font-size: 100%
         }
 
         body {
-            margin: 0
+            margin: 0;
+            color: #008f4d;
+            font-size: 14px;
+            font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Inter", "Helvetica", "Arial", sans-serif;
+            line-height: 1.5;
+            background-image: linear-gradient(to right, #ffffff, #f5ddd3);
+            background-attachment: fixed;
+            background-repeat: no-repeat
         }
 
         article {
             display: block
         }
 
-
         small {
             font-size: 1.3rem
         }
 
-
         hr {
-            box-sizing: content-box
-        }
-
-
-        body {
-            background-image: linear-gradient(to right, #ffffff, #f5ddd3);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Inter", "Helvetica", "Arial", sans-serif;
-            font-size: 1.4rem;
-            line-height: 1.5;
-            margin: .4rem 0 1.6rem
+            box-sizing: content-box;
+            clear: both;
+            height: 0;
+            border: 0;
+            border-bottom: 1px solid #c8ccd1;
+            margin: .26rem 0
         }
 
         a {
-            touch-action: manipulation
+            touch-action: manipulation;
+            unicode-bidi: embed;
+            outline: 0;
+            color: #fd4b97;
+            text-decoration: none
         }
 
-        a,
         a:active,
         a:focus {
-            unicode-bidi: embed;
             outline: 0;
             color: #fd4b97;
             text-decoration: none
@@ -71,81 +71,37 @@
         }
 
         img {
-            vertical-align: middle
-        }
-
-        hr,
-        img {
+            vertical-align: middle;
             border: 0
         }
 
-        hr {
-            clear: both;
-            height: 0;
-            border-bottom: 1px solid #c8ccd1;
-            margin: .26rem 0
-        }
-
-        .site-license {
-            color: #808080;
-            text-align: left;
-            padding-bottom: 16px
-        }
-
-        .site-license small:after {
-            content: "\2022";
-            display: inline-block;
-            font-size: 1.3rem;
-            line-height: inherit
-        }
-
-        .site-license small:last-child:after {
-            display: none
-        }
-
-
-        @media (max-width:480px) {
-            hr {
-                margin-top: .65rem
-            }
-        }
-
-        @media (-webkit-min-device-pixel-ratio:2),
-        (min--moz-device-pixel-ratio:2),
-        (min-resolution:2dppx),
-        (min-resolution:192dpi) {
-            hr {
-                border-bottom-width: .5px
-            }
-        }
-
-        @supports (-webkit-marquee-style:slide) {
-            hr {
-                border-bottom-width: 1px
-            }
-        }
-
-        html {
-            font-size: 100%
-        }
-
-        body {
-            color: #008f4d;
-            font-size: 14px;
-            margin: 0;
-            font-family: sans-serif
-        }
-
+        /* Layout components */
+        .header-wrapper,
         .our-projects-wrapper,
-        .header-wrapper {
+        .wmf-wrapper,
+        .project-list,
+        .site-license {
             width: 100%;
             box-sizing: border-box;
-            margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
-            max-width: 1067px;
+            max-width: 1067px
         }
 
+        .header-wrapper,
+        .our-projects-wrapper {
+            margin-top: 100px
+        }
+
+        .wmf-wrapper {
+            margin-bottom: 50px
+        }
+
+        .project-list {
+            margin-bottom: 40px
+        }
+
+        /* Projects section */
         .our-projects {
             max-width: 996px;
             min-height: 90px
@@ -167,7 +123,7 @@
         .our-projects-header {
             font-size: 3rem;
             font-family: 'Linux Libertine', serif;
-            line-height: 1.5;
+            line-height: 1.5
         }
 
         .our-projects-desc-wrapper {
@@ -181,39 +137,20 @@
             text-align: left
         }
 
-        .wmf {
-            min-height: 48px
+        /* Welcome section */
+        .welcome-message {
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: left
         }
 
-        .wmf-wrapper {
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1067px
+        .welcome-message-subtext {
+            font-size: 1.5rem;
+            text-align: left
         }
 
-        .wmf-desc {
-            font-size: 16px
-        }
-
-        .project-list {
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 40px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1067px
-        }
-
-        .site-license {
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1067px
-        }
-
+        /* Project items */
         .project-group {
             max-width: 996px;
             margin-top: 32px;
@@ -237,23 +174,6 @@
         .project-block {
             margin: 4px;
             margin-left: 12px
-        }
-
-        .welcome-message {
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .welcome-message,
-        .welcome-message-subtext {
-            font-size: 1.5rem;
-            text-align: left
-        }
-
-        @media only screen and (min-width:1067px) {
-            .project-block {
-                width: 170px
-            }
         }
 
         .project-name-wrapper {
@@ -285,43 +205,71 @@
             height: 48px
         }
 
+        /* WMF section */
+        .wmf {
+            min-height: 48px
+        }
+
+        .wmf-desc {
+            font-size: 16px
+        }
+
+        /* Footer */
+        .site-license {
+            color: #808080;
+            text-align: left;
+            padding-bottom: 16px
+        }
+
         .site-license small,
         .site-license small:after {
             font-size: 14px
         }
 
+        .site-license small:after {
+            content: "\2022";
+            display: inline-block;
+            font-size: 1.3rem;
+            line-height: inherit
+        }
+
+        .site-license small:last-child:after {
+            display: none
+        }
+
+        /* Media queries */
+        @media only screen and (min-width:1067px) {
+            .project-block {
+                width: 170px
+            }
+        }
+
         @media only screen and (max-width:1067px) {
-            .header-wrapper {
-                margin-top: 40px;
-                width: 100%;
+
+            .header-wrapper,
+            .our-projects-wrapper,
+            .wmf-wrapper,
+            .project-list,
+            .site-license {
                 padding-left: 32px;
-                padding-right: 32px;
+                padding-right: 32px
+            }
+
+            .header-wrapper {
+                margin-top: 40px
             }
 
             .our-projects-wrapper {
-                margin-top: 60px;
-                width: 100%;
-                padding-left: 32px;
-                padding-right: 32px;
+                margin-top: 60px
+            }
+
+            .wmf-wrapper {
+                margin: 20px 0
             }
 
             .our-projects-desc-wrapper {
                 width: 100%;
                 box-sizing: border-box
-            }
-
-            .wmf-wrapper {
-                margin: 20px 0;
-                width: 100%;
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-
-            .project-list,
-            .site-license {
-                width: 100%;
-                padding-left: 32px;
-                padding-right: 32px;
             }
 
             .project-row {
@@ -332,14 +280,33 @@
                 width: 100%
             }
         }
+
+        @media (max-width:480px) {
+            hr {
+                margin-top: .65rem
+            }
+        }
+
+        @media (-webkit-min-device-pixel-ratio:2),
+        (min--moz-device-pixel-ratio:2),
+        (min-resolution:2dppx),
+        (min-resolution:192dpi) {
+            hr {
+                border-bottom-width: .5px
+            }
+        }
+
+        @supports (-webkit-marquee-style:slide) {
+            hr {
+                border-bottom-width: 1px
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <div class="header-wrapper">
         <div class="our-projects">
-
             <div class="our-projects-title-wrapper"><span class="welcome-message">This is Future Audiences.</span></div>
             <div class="our-projects-desc-wrapper"><span class="welcome-message-subtext">We are an experimental arm of
                     Wikimedia investigating new platforms and products.</span></div>
@@ -348,7 +315,6 @@
 
     <div class="our-projects-wrapper">
         <div class="our-projects">
-
             <div class="our-projects-title-wrapper"><span class="our-projects-title">Our Experiments</span></div>
             <div class="our-projects-desc-wrapper"><span class="our-projects-desc">These projects aim to
                     establish promising areas of work for
@@ -359,65 +325,63 @@
                         href="https://www.mediawiki.org/">MediaWiki</a> software.</span></div>
         </div>
     </div>
+
     <div class="project-list">
         <div class="project-group">
-            <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Technology</span>
-            </div>
+            <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Technology</span></div>
             <div class="project-row">
                 <a href="https://chromewebstore.google.com/detail/wikipedia-add-a-fact/kecnjhdipdihkibljeicopdcoinghmhj"
                     class="project-wrapper">
                     <img class="project-logo" alt="" src="images/chrome_store.png">
                     <div class="project-block">
-                        <div class="project-name-wrapper"><span class="project-name">Add A Fact</span></div><span
-                            class="project-tagline">A chrome extension to assist contributions</span>
+                        <div class="project-name-wrapper"><span class="project-name">Add A Fact</span></div>
+                        <span class="project-tagline">A chrome extension to assist contributions</span>
                     </div>
                 </a>
-
             </div>
         </div>
+
         <div class="project-group">
             <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Social</span></div>
             <div class="project-row">
                 <a href="https://www.tiktok.com/@wikipedia" class="project-wrapper">
                     <img class="project-logo" alt="" src="images/tiktok.svg">
                     <div class="project-block">
-                        <div class="project-name-wrapper"><span class="project-name">Tiktok</span></div><span
-                            class="project-tagline">Generating informative videos from interesting facts</span>
+                        <div class="project-name-wrapper"><span class="project-name">Tiktok</span></div>
+                        <span class="project-tagline">Generating informative videos from interesting facts</span>
                     </div>
                 </a>
-
             </div>
         </div>
+
         <div class="project-group">
-            <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Entertainment</span>
-            </div>
+            <div class="project-group-tagline-wrapper"><span class="project-group-tagline">Entertainment</span></div>
             <div class="project-row">
                 <a href="https://www.roblox.com/games/99320538920886/Wikipedia-Speed-Run" class="project-wrapper">
                     <img class="project-logo" alt="" src="images/roblox.png">
                     <div class="project-block">
-                        <div class="project-name-wrapper"><span class="project-name">Speed Run</span></div><span
-                            class="project-tagline">A Roblox experience for racing from one
-                            article to another</span>
+                        <div class="project-name-wrapper"><span class="project-name">Speed Run</span></div>
+                        <span class="project-tagline">A Roblox experience for racing from one article to another</span>
                     </div>
                 </a>
                 <a href="" class="project-wrapper" id="wikigames-link">
                     <img class="project-logo" alt="" src="images/wikigames.svg">
                     <div class="project-block">
-                        <div class="project-name-wrapper"><span class="project-name">Wikigames</span></div><span
-                            class="project-tagline">Free games and puzzles within a native mobile app</span>
+                        <div class="project-name-wrapper"><span class="project-name">Wikigames</span></div>
+                        <span class="project-tagline">Free games and puzzles within a native mobile app</span>
                     </div>
                 </a>
             </div>
         </div>
     </div>
+
     <div class="wmf-wrapper">
         <div class="wmf">
             <div class="wmf-block">
                 <div class="wmf-desc-wrapper"><span class="wmf-desc">The <a
                             href="https://wikimediafoundation.org/">Wikimedia Foundation</a> is the non-profit
                         organization that hosts all Wikimedia projects and supports communities all over the world
-                        who
-                        create and curate freely accessible content.</span></div>
+                        who create and curate freely accessible content.</span></div>
             </div>
         </div>
     </div>
@@ -425,13 +389,14 @@
     <hr>
     <p class="site-license">
         <small class="">This page is available under the <a
-                href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
-                License </a></small>
+                href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License
+            </a></small>
         <small class=""><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of
                 Use </a></small>
         <small class=""><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy
                 Policy</a></small>
     </p>
+
     <script>
         // Get the Wikigames link element
         const wikigamesLink = document.getElementById('wikigames-link');
